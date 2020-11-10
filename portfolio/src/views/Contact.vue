@@ -1,15 +1,6 @@
 <template>
   <div>
-    <div class="nav">
-      <div class="home">
-        <router-link class="link" to="/">Michaela Arratoon</router-link>
-      </div>
-      <div class="menu">
-        <router-link class="link" to="/about">About</router-link>
-        <router-link class="link" to="/contact">Contact</router-link>
-        <router-link class="link" to="/projects">Projects</router-link>
-      </div>
-    </div>
+    <Nav></Nav>
     <div>
       <img src="../assets/contact.png" />
     </div>
@@ -45,10 +36,10 @@
         </div>
         <div class="form-result">
           <p class="alert alert-success" v-if="success && !error">
-            Message sent successfully.
+            Message sent!
           </p>
           <p class="alert alert-error" v-if="!success && error">
-            Message failed.
+            Message failed!
           </p>
         </div>
         <div class="form-group">
@@ -61,8 +52,12 @@
 </template>
 
 <script>
+import Nav from "@/components/Nav.vue";
 export default {
   name: "ContactForm",
+  components: {
+    Nav,
+  },
   data: function() {
     return {
       contactFormData: {
@@ -121,7 +116,7 @@ export default {
   margin: 5rem;
   border-radius: 4px;
   height: 50vh;
-  width: 30vw;
+  width: 50vw;
 }
 
 h1 {
@@ -131,7 +126,6 @@ h1 {
 }
 .form-group {
   padding: 10px;
-  font-family: "NaftaLight-Regular";
 }
 .form-control {
   width: 100%;
@@ -139,6 +133,8 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
 }
 input[type="text"].form-control {
   margin: 8px 0;
@@ -153,7 +149,7 @@ textarea.form-control {
   outline: none;
   border: none;
   background: black;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "NaftaLight-Regular";
   color: white;
@@ -170,6 +166,7 @@ textarea.form-control {
 }
 .alert {
   padding: 0 10px;
+  font-family: "NaftaLight-Regular";
 }
 .alert-success {
   color: black;
@@ -183,32 +180,9 @@ textarea.form-control {
   src: url("../fonts/NaftaLight-Regular.ttf");
 }
 
-.nav {
-  display: flex;
-  flex-direction: row;
-  margin-top: 2rem;
-  font-family: "NaftaLight-Regular";
-  font-size: 32px;
-}
-
-.link {
-  text-decoration-line: none;
-  color: black;
-  padding: 0 2rem;
-}
-
-.link:hover {
-  color: white;
-  background-color: black;
-  border-radius: 50px;
-}
-
 img {
-  margin-top: 5rem;
   height: 80vh;
   width: 80vw;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 </style>
