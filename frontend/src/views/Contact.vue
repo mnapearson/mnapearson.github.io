@@ -65,7 +65,7 @@ export default {
         email: "",
         message: "",
       },
-      success: false,
+      success: true,
       error: false,
     };
   },

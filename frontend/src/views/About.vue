@@ -77,28 +77,29 @@ export default {
 .resume {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
   margin-top: 2rem;
 }
 
 .finger {
-  height: 60px;
+  height: 35px;
   width: auto;
   display: flex;
   margin-top: 2rem;
+  margin-left: 0.5rem;
 }
 
 .icon {
-  height: 60px;
-  width: 60px;
-  margin: 1rem;
+  height: 50px;
+  width: auto;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
 }
 
 .text {
   font-family: "NaftaLight-Regular";
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
