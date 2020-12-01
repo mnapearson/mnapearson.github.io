@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/mnapearson/portfolio",
   "author": "mnapearson <marratoon@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "serve": "cd frontend && yarn serve"
+  }
 }
