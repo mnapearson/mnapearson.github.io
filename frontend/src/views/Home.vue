@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="welcome"><h1>Michaela Arratoon</h1></div>
+    <div class="welcome"><h1>M.A.P.</h1></div>
     <div class="cubes">
       <div class="about">
         <div class="scene">

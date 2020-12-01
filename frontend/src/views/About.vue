@@ -13,11 +13,19 @@
       </div>
       <div class="description">
         <div class="text">
-          <h1>Hey, I am a UX/UI design-driven Software Engineer.</h1>
+          <h1>Hey stranger,</h1>
+          <h1>I am a UX obsessed design-driven Software Engineer.</h1>
           <p>
-            My name is Michaela Arratoon. I like to make websites. Let's make
-            one together, shall we?
+            My name is Michaela Pearson. I like to make websites. Let's make one
+            together, shall we?
           </p>
+          <div class="resume">
+            <p>*Download my CV</p>
+            <img class="finger" src="../assets/pointing-finger.png" alt="" />
+            <a href="../resume.pdf" download="../resume.pdf"
+              ><img class="icon" src="../assets/resume-icon.png" alt=""
+            /></a>
+          </div>
         </div>
       </div>
     </section>
@@ -66,8 +74,32 @@ export default {
   width: 50%;
 }
 
+.resume {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.finger {
+  height: 60px;
+  width: auto;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.icon {
+  height: 60px;
+  width: 60px;
+  margin: 1rem;
+}
+
 .text {
   font-family: "NaftaLight-Regular";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1 {

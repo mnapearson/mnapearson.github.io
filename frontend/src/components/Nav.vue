@@ -2,7 +2,7 @@
   <div>
     <nav>
       <div class="home">
-        <router-link class="link" to="/">Michaela Arratoon</router-link>
+        <router-link class="link" to="/">Michaela Pearson</router-link>
       </div>
       <div class="menu">
         <router-link class="link" to="/about">About</router-link>
