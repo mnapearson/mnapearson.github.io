@@ -22,7 +22,7 @@
           <div class="resume">
             <p>*Download my CV</p>
             <img class="finger" src="../assets/pointing-finger.png" alt="" />
-            <a href="../resume.pdf" download="../resume.pdf"
+            <a href="../map-resume.pdf" download="../map-resume.pdf"
               ><img class="icon" src="../assets/resume-icon.png" alt=""
             /></a>
           </div>
