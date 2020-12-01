@@ -38,7 +38,7 @@
         <img class="devhaus" src="../assets/devhaus.png" alt="" />
       </div>
       <div class="text">
-        <h2>DevHaus</h2>
+        <a href="https://devhaus-testing.web.app"><h2>DevHaus</h2></a>
         <p>
           A site for members of
           <a href="https://codecampleipzig.de/">Code Camp Leipzig</a> to
@@ -97,13 +97,13 @@ export default {
   height: 80vh;
   width: 80vw;
   display: flex;
+  margin-top: 2rem;
 }
 
 .image {
   display: flex;
+  justify-content: center;
   margin-top: 2rem;
-  max-height: 100vh;
-  max-height: 100vw;
 }
 
 .zencal,
@@ -126,27 +126,28 @@ export default {
 
 .text {
   visibility: hidden;
-  opacity: 0;
+  width: 50%;
+  height: 60%;
+  align-content: center;
   font-family: "NaftaLight-Regular";
-  width: 50vw;
-  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: opacity 0.2s, visibility 0.2s;
-  position: absolute;
-  top: 30;
-  bottom: 0;
   left: 0;
   right: 0;
-  background: black;
-  padding: 3rem;
+  bottom: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 4rem;
   color: white;
+  text-align: left;
 }
 
 h2 {
   margin-bottom: 1rem;
-  font-size: 56px;
+  font-size: 40px;
 }
 
 h2:hover {
@@ -159,8 +160,9 @@ h2:hover {
 }
 
 p {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 3rem;
+  width: 50%;
 }
 
 a {

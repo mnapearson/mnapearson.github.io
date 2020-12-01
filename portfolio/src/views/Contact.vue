@@ -70,24 +70,24 @@ export default {
     };
   },
   methods: {
-    sendMail: function() {
-      const url = "https://portfolio-contact-form-4bee7.web.app/";
-      const { name, email, message } = this.contactFormData;
-      const payload = { name, email, message };
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      })
-        .then(() => {
-          this.success = true;
-          this.resetForm();
-        })
-        .catch(() => {
-          this.error = true;
+    async sendMail() {
+      try {
+        const url = " https://portfolio-email-form.herokuapp.com/contact";
+        const { name, email, message } = this.contactFormData;
+        const payload = { name, email, message };
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
         });
+        const responseBody = await response.json();
+        console.log(responseBody);
+        this.resetForm();
+      } catch {
+        this.error = "something is wrong";
+      }
     },
     resetForm: function() {
       this.contactFormData = {
@@ -113,7 +113,7 @@ export default {
   height: 100vh;
 }
 .contact-form {
-  margin: 5rem;
+  margin: 3rem;
   border-radius: 4px;
   height: 50vh;
   width: 50vw;
@@ -184,5 +184,6 @@ img {
   height: 80vh;
   width: 80vw;
   display: flex;
+  margin-top: 2rem;
 }
 </style>

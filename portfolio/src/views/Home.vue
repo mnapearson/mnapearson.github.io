@@ -358,6 +358,7 @@ h1 {
 }
 
 .cube {
+  margin: 1 rem;
   width: 200px;
   height: 200px;
   position: relative;
