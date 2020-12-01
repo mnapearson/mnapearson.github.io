@@ -1,6 +1,8 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "firebase-tools": "^8.14.1"
-  }
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mnapearson/portfolio",
+  "author": "mnapearson <marratoon@gmail.com>",
+  "license": "MIT"
 }
