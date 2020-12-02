@@ -14,6 +14,7 @@
             id="msg-name"
             class="form-control"
             v-model="contactFormData.name"
+            required
           />
         </div>
         <div class="form-group">
@@ -23,6 +24,7 @@
             id="msg-email"
             class="form-control"
             v-model="contactFormData.email"
+            required
           />
         </div>
         <div class="form-group">
@@ -32,6 +34,7 @@
             id="msg-message"
             class="form-control"
             v-model="contactFormData.message"
+            required
           ></textarea>
         </div>
         <div class="form-result">
@@ -65,8 +68,8 @@ export default {
         email: "",
         message: "",
       },
-      success: true,
-      error: false,
+      success: null,
+      error: null,
     };
   },
   methods: {
@@ -84,9 +87,10 @@ export default {
         });
         const responseBody = await response.json();
         console.log(responseBody);
+        this.success = true;
         this.resetForm();
       } catch {
-        this.error = "something is wrong";
+        this.error = true;
       }
     },
     resetForm: function() {
