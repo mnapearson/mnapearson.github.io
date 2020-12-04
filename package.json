@@ -6,6 +6,7 @@
   "author": "mnapearson <marratoon@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "install": "cd frontend && yarn install",
     "serve": "cd frontend && yarn serve",
     "build": "cd frontend && yarn build"
   }
