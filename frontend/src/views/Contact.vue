@@ -5,51 +5,12 @@
       <img src="../assets/contact.png" />
     </div>
     <div class="contact">
-      <form class="contact-form" @submit.prevent="sendMail">
-        <h1>Let's collaborate...</h1>
-        <div class="form-group">
-          <input
-            placeholder="email"
-            type="text"
-            id="msg-name"
-            class="form-control"
-            v-model="contactFormData.name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input
-            placeholder="name"
-            type="text"
-            id="msg-email"
-            class="form-control"
-            v-model="contactFormData.email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <textarea
-            placeholder="Write something clever..."
-            rows="10"
-            id="msg-message"
-            class="form-control"
-            v-model="contactFormData.message"
-            required
-          ></textarea>
-        </div>
-        <div class="form-result">
-          <p class="alert alert-success" v-if="success && !error">
-            Message sent!
-          </p>
-          <p class="alert alert-error" v-if="!success && error">
-            Message failed!
-          </p>
-        </div>
-        <div class="form-group">
-          <button class="btn" type="submit">send</button>
-        </div>
-        <h1>...I'll get back to you asap!</h1>
-      </form>
+      <iframe
+        src="https://us1.list-manage.com/contact-form?u=0f9f0b1c4827784518269bdd5&form_id=5fb9b9c06d9bc8f17af53a14c28c1bbd"
+        width="100%"
+        height="100%"
+        frameborder="0"
+      ></iframe>
     </div>
   </div>
 </template>
@@ -60,46 +21,6 @@ export default {
   name: "ContactForm",
   components: {
     Nav,
-  },
-  data: function() {
-    return {
-      contactFormData: {
-        name: "",
-        email: "",
-        message: "",
-      },
-      success: null,
-      error: null,
-    };
-  },
-  methods: {
-    async sendMail() {
-      try {
-        const url = " https://portfolio-email-form.herokuapp.com/contact";
-        const { name, email, message } = this.contactFormData;
-        const payload = { name, email, message };
-        const response = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(payload),
-        });
-        const responseBody = await response.json();
-        console.log(responseBody);
-        this.success = true;
-        this.resetForm();
-      } catch {
-        this.error = true;
-      }
-    },
-    resetForm: function() {
-      this.contactFormData = {
-        name: "",
-        email: "",
-        message: "",
-      };
-    },
   },
 };
 </script>
@@ -113,14 +34,26 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.contact-form {
-  margin: 3rem;
-  border-radius: 4px;
-  height: 50vh;
-  width: 50vw;
+
+#mc-embedded-subscribe-form {
+  margin: 2rem;
+  font-family: "NaftaLight-Regular";
+}
+
+#mce-MMERGE2 {
+  width: 200px;
+  height: 200px;
+}
+
+input {
+  font-family: "NaftaLight-Regular";
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 200px;
 }
 
 h1 {
@@ -128,25 +61,7 @@ h1 {
   text-align: center;
   margin: 2rem 0 1rem;
 }
-.form-group {
-  padding: 10px;
-}
-.form-control {
-  width: 100%;
-  padding: 12px 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
-}
-input[type="text"].form-control {
-  margin: 8px 0;
-  display: inline-block;
-}
-textarea.form-control {
-  resize: none;
-}
+
 .btn {
   cursor: pointer;
   padding: 8px 10px;
@@ -167,16 +82,6 @@ textarea.form-control {
 .btn:hover {
   background-color: pink;
   color: black;
-}
-.alert {
-  padding: 0 10px;
-  font-family: "NaftaLight-Regular";
-}
-.alert-success {
-  color: black;
-}
-.alert-error {
-  color: #ff2121;
 }
 
 @font-face {
