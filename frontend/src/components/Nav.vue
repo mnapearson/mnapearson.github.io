@@ -1,8 +1,8 @@
 <template>
   <div>
-    <nav>
+    <nav class="nav">
       <div class="home">
-        <router-link class="link" to="/">Michaela Pearson</router-link>
+        <router-link class="link" to="/">Paradies Studio</router-link>
       </div>
       <div class="menu">
         <router-link class="link" to="/about">About</router-link>
@@ -20,6 +20,13 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (max-width: 600px) {
+  .nav {
+    padding: 1rem;
+    font-size: 18px;
+  }
+}
+
 @font-face {
   font-family: "NaftaLight-Regular";
   src: url("../fonts/NaftaLight-Regular.ttf");
@@ -28,6 +35,7 @@ export default {
 nav {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-top: 2rem;
   font-family: "NaftaLight-Regular";
   font-size: 32px;
@@ -64,22 +72,18 @@ nav {
 
 .home {
   display: flex;
-  align-items: left;
-  width: 70vw;
+  text-align: center;
 }
 
 .menu {
-  width: 30vw;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .link {
   text-decoration-line: none;
   color: black;
   color: white;
-  margin: 0 0.2rem;
+  padding: 0 0.75rem;
 }
 
 .link:hover {
