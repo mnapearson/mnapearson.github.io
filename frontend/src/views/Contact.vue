@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nav></Nav>
-    <div>
+    <div class="main">
       <img src="../assets/contact.png" />
     </div>
     <div class="contact">
@@ -28,6 +28,13 @@ export default {
 <style scoped>
 * {
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .main img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .contact {

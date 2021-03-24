@@ -2,66 +2,72 @@
   <div>
     <div @mouseover="hover = true" @mouseleave="hover = false" />
     <Nav></Nav>
-    <div>
+    <div class="main">
       <img class="projects" src="../assets/projects.png" />
     </div>
-    <section class="project">
-      <div class="image">
-        <img class="zencal" src="../assets/zencal.png" alt="" />
+    <section class="project-main">
+      <div class="project">
+        <div class="image">
+          <img class="zencal" src="../assets/zencal.png" alt="" />
+        </div>
+        <div class="text">
+          <a href="https://zencal-b5217.web.app/"><h2>ZenCal</h2></a>
+          <p>
+            An event and task calendar app, that allows users to log in and
+            create reminders for their important events and tasks. Built with
+            Vue.js and Firebase.
+          </p>
+        </div>
       </div>
-      <div class="text">
-        <a href="https://zencal-b5217.web.app/"><h2>ZenCal</h2></a>
-        <p>
-          An event and task calendar app, that allows users to log in and create
-          reminders for their important events and tasks. Built with Vue.js and
-          Firebase.
-        </p>
+
+      <div class="project">
+        <div class="image">
+          <img class="celestial" src="../assets/celestial.png" alt="" />
+        </div>
+        <div class="text">
+          <a href="https://celestial-weather.netlify.app/"
+            ><h2>Celestial Weather</h2></a
+          >
+          <p>
+            A project using pure vanilla javascript to create a basic frontend
+            framework. Multiple API calls to create an interesting user
+            experience including horoscopes, APOD, and the current local
+            weather.
+          </p>
+        </div>
       </div>
-    </section>
-    <section class="project">
-      <div class="image">
-        <img class="celestial" src="../assets/celestial.png" alt="" />
+
+      <div class="project">
+        <div class="image">
+          <img class="devhaus" src="../assets/devhaus.png" alt="" />
+        </div>
+        <div class="text">
+          <a href="https://devhaus-testing.web.app"><h2>DevHaus</h2></a>
+          <p>
+            A site for members of
+            <a href="https://codecampleipzig.de/">Code Camp Leipzig</a> to
+            connect, contact eachother, and keep up to date with events and
+            workshops that are being organized and offered. Built with Vue.js,
+            Vuex, Firebase, and Tailwind-CSS.
+          </p>
+        </div>
       </div>
-      <div class="text">
-        <a href="https://celestial-weather.netlify.app/"
-          ><h2>Celestial Weather</h2></a
-        >
-        <p>
-          A project using pure vanilla javascript to create a basic frontend
-          framework. Multiple API calls to create an interesting user experience
-          including horoscopes, APOD, and the current local weather.
-        </p>
-      </div>
-    </section>
-    <section class="project">
-      <div class="image">
-        <img class="devhaus" src="../assets/devhaus.png" alt="" />
-      </div>
-      <div class="text">
-        <a href="https://devhaus-testing.web.app"><h2>DevHaus</h2></a>
-        <p>
-          A site for members of
-          <a href="https://codecampleipzig.de/">Code Camp Leipzig</a> to
-          connect, contact eachother, and keep up to date with events and
-          workshops that are being organized and offered. Built with Vue.js,
-          Vuex, Firebase, and Tailwind-CSS.
-        </p>
-      </div>
-    </section>
-    <section class="project">
-      <div class="image">
-        <img class="makangani" src="../assets/makangani.png" alt="" />
-      </div>
-      <div class="text">
-        <a href="https://makangani.netlify.app/"><h2>Makangani</h2></a>
-        <p>
-          Offical site for Leipzig, DE based rapper
-          <a href="https://open.spotify.com/artist/0yC4F5v6MCGhYGUvY49DRm"
-            >Makangani</a
-          >. Built with pure vanilla javascript, html, and css3. Inspired by the
-          designs from Dreamville Records artists such as JID, Mereba, and Ari
-          Lennox.
-        </p>
+
+      <div class="project">
+        <div class="image">
+          <img class="makangani" src="../assets/makangani.png" alt="" />
+        </div>
+        <div class="text">
+          <a href="https://makangani.netlify.app/"><h2>Makangani</h2></a>
+          <p>
+            Offical site for Leipzig, DE based rapper
+            <a href="https://open.spotify.com/artist/0yC4F5v6MCGhYGUvY49DRm"
+              >Makangani</a
+            >. Built with pure vanilla javascript, html, and css3. Inspired by
+            the designs from Dreamville Records artists such as JID, Mereba, and
+            Ari Lennox.
+          </p>
+        </div>
       </div>
     </section>
   </div>
@@ -87,6 +93,12 @@ export default {
   margin: 0 auto;
   cursor: url();
 }
+@media only screen and (max-width: 600px) {
+  .main img {
+    width: 300px;
+    height: 300px;
+  }
+}
 
 @font-face {
   font-family: "NaftaLight-Regular";
@@ -94,55 +106,49 @@ export default {
 }
 
 .projects {
-  height: 80vh;
-  width: 80vw;
+  height: 650px;
+  width: 650px;
   display: flex;
   margin-top: 2rem;
 }
 
-.image {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.zencal,
-.celestial,
-.devhaus,
-.makangani {
-  max-width: 80vw;
-  max-height: 80vh;
-  border: 1px solid gray;
-}
-
-.project {
-  position: relative;
+.project-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 3rem;
-  cursor: url("/assets/cursor.png");
+  align-items: center;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: 410px;
+  margin: 2rem;
+  border: 1px solid gray;
+}
+
+.project img {
+  height: 410px;
+  width: 650px;
 }
 
 .text {
   visibility: hidden;
-  width: 50%;
-  height: 60%;
-  align-content: center;
-  font-family: "NaftaLight-Regular";
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  align-content: center;
+  font-family: "NaftaLight-Regular";
   transition: opacity 0.2s, visibility 0.2s;
-  position: absolute;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
-  padding: 4rem;
   color: white;
-  text-align: left;
+  padding: 4rem 2rem;
+  width: 500px;
+  height: 250px;
 }
 
 h2 {
@@ -162,7 +168,7 @@ h2:hover {
 p {
   font-size: 16px;
   line-height: 3rem;
-  width: 50%;
+  width: 80%;
 }
 
 a {

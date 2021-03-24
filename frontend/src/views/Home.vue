@@ -191,13 +191,14 @@ export default {};
     padding: 0;
   }
 
-  .scene {
-    padding: 4rem;
+  .about .scene {
+    margin: 0;
+    padding: 0;
   }
 
-  .about .scene {
-    margin-top: 0;
-    padding-top: 0;
+  .contact .scene {
+    margin: 0;
+    padding: 0;
   }
 
   .welcome h1 {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nav></Nav>
-    <div>
+    <div class="main">
       <img class="about" src="../assets/about.png" />
     </div>
     <section class="about-main">
@@ -45,6 +45,13 @@ export default {
 <style scoped>
 * {
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .main img {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 @font-face {
