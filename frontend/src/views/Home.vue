@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="welcome"><h1>Michaela Pearson</h1></div>
+    <div class="welcome">
+      <h1>Paradies Studio</h1>
+      <h2>Web Design & Development</h2>
+    </div>
     <div class="cubes">
       <div class="about">
         <div class="scene">
@@ -9,48 +12,48 @@
               <div class="cube-face cube-face-front">
                 <img
                   src="../assets/about.png"
-                  height="200px"
-                  width="200px"
+                  height="150px"
+                  width="150px"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-back">
                 <img
                   src="../assets/about.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-left">
                 <img
                   src="../assets/about.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-right">
                 <img
                   src="../assets/about.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-top">
                 <img
                   src="../assets/about.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-bottom">
                 <img
                   src="../assets/about.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
@@ -65,48 +68,48 @@
               <div class="cube-face cube-face-front">
                 <img
                   src="../assets/projects.png"
-                  height="200px"
-                  width="200px"
+                  height="150px"
+                  width="150px"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-back">
                 <img
                   src="../assets/projects.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-left">
                 <img
                   src="../assets/projects.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-right">
                 <img
                   src="../assets/projects.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-top">
                 <img
                   src="../assets/projects.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-bottom">
                 <img
                   src="../assets/projects.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
@@ -122,48 +125,48 @@
               <div class="cube-face cube-face-front">
                 <img
                   src="../assets/contact.png"
-                  height="200px"
-                  width="200px"
+                  height="150px"
+                  width="150px"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-back">
                 <img
                   src="../assets/contact.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-left">
                 <img
                   src="../assets/contact.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-right">
                 <img
                   src="../assets/contact.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-top">
                 <img
                   src="../assets/contact.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
               <div class="cube-face cube-face-bottom">
                 <img
                   src="../assets/contact.png"
-                  height="200px"
-                  width="200px;"
+                  height="150px"
+                  width="150px;"
                   id="cube-image"
                 />
               </div>
@@ -180,6 +183,33 @@ export default {};
 </script>
 
 <style scoped>
+@media only screen and (max-width: 600px) {
+  .cubes {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .scene {
+    padding: 4rem;
+  }
+
+  .about .scene {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .welcome h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .welcome h2 {
+    font-size: 24px;
+  }
+}
 @font-face {
   font-family: "NaftaLight-Regular";
   src: url("../fonts/NaftaLight-Regular.ttf");
@@ -188,6 +218,15 @@ export default {};
 h1 {
   font-family: "NaftaLight-Regular";
   font-size: 72px;
+  -webkit-animation: text-pop-up-top 4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: text-pop-up-top 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+h2 {
+  font-family: "NaftaLight-Regular";
+  font-size: 52px;
+  margin: 0;
   -webkit-animation: text-pop-up-top 4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;
   animation: text-pop-up-top 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -232,16 +271,22 @@ h1 {
 
 .welcome {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 3rem;
+  align-items: center;
+  margin-top: 4rem;
 }
 
 .cubes {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 4rem 5rem;
+  margin: 3rem 5rem;
   justify-content: space-evenly;
+}
+
+.scene {
+  padding: 3rem;
 }
 
 .about {
@@ -408,34 +453,34 @@ h1 {
 }
 
 .cube-face {
-  width: inherit;
-  height: inherit;
+  width: 150px;
+  height: 150px;
   position: absolute;
   opacity: 0.7;
 }
 
 .cube-face-front {
-  transform: translate3d(0, 0, 100px);
+  transform: translate3d(0, 0, 75px);
 }
 
 .cube-face-back {
-  transform: rotateY(180deg) translate3d(0, 0, 100px);
+  transform: rotateY(180deg) translate3d(0, 0, 75px);
 }
 
 .cube-face-left {
-  transform: rotateY(-90deg) translate3d(0, 0, 100px);
+  transform: rotateY(-90deg) translate3d(0, 0, 75px);
 }
 
 .cube-face-right {
-  transform: rotateY(90deg) translate3d(0, 0, 100px);
+  transform: rotateY(90deg) translate3d(0, 0, 75px);
 }
 
 .cube-face-top {
-  transform: rotateX(90deg) translate3d(0, 0, 100px);
+  transform: rotateX(90deg) translate3d(0, 0, 75px);
 }
 
 .cube-face-bottom {
-  transform: rotateX(-90deg) translate3d(0, 0, 100px);
+  transform: rotateX(-90deg) translate3d(0, 0, 75px);
 }
 
 .scene:hover {
