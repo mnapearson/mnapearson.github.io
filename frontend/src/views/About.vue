@@ -54,6 +54,13 @@ export default {
   }
 }
 
+.about img {
+  height: 650px;
+  width: 650px;
+  display: flex;
+  margin-top: 2rem;
+}
+
 @font-face {
   font-family: "NaftaLight-Regular";
   src: url("../fonts/NaftaLight-Regular.ttf");

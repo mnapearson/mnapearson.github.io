@@ -9,5 +9,8 @@
     "install": "cd frontend && yarn install",
     "serve": "cd frontend && yarn serve",
     "build": "cd frontend && yarn build"
+  },
+  "dependencies": {
+    "vue-carousel": "^0.18.0"
   }
 }

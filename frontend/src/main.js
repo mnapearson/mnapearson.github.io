@@ -1,10 +1,12 @@
 import Vue from "vue";
 import App from "./App.vue";
 import "./registerServiceWorker";
+import VueCarousel from "vue-carousel";
 import router from "./router";
 import store from "./store";
 
 Vue.config.productionTip = false;
+Vue.use(VueCarousel);
 
 new Vue({
   router,

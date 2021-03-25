@@ -2,7 +2,7 @@
   <div>
     <Nav></Nav>
     <div class="main">
-      <img src="../assets/contact.png" />
+      <img class="main-image" src="../assets/contact.png" />
     </div>
     <div class="contact">
       <iframe
@@ -35,6 +35,18 @@ export default {
     width: 300px;
     height: 300px;
   }
+}
+
+@font-face {
+  font-family: "NaftaLight-Regular";
+  src: url("../fonts/NaftaLight-Regular.ttf");
+}
+
+.main-image {
+  height: 650px;
+  width: 650px;
+  display: flex;
+  margin-top: 2rem;
 }
 
 .contact {
@@ -94,12 +106,5 @@ h1 {
 @font-face {
   font-family: "NaftaLight-Regular";
   src: url("../fonts/NaftaLight-Regular.ttf");
-}
-
-img {
-  height: 80vh;
-  width: 80vw;
-  display: flex;
-  margin-top: 2rem;
 }
 </style>

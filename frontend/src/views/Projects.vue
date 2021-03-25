@@ -3,72 +3,114 @@
     <div @mouseover="hover = true" @mouseleave="hover = false" />
     <Nav></Nav>
     <div class="main">
-      <img class="projects" src="../assets/projects.png" />
+      <img class="main-image" src="../assets/projects.png" />
     </div>
     <section class="project-main">
-      <div class="project">
-        <div class="image">
-          <img class="zencal" src="../assets/zencal.png" alt="" />
-        </div>
-        <div class="text">
-          <a href="https://zencal-b5217.web.app/"><h2>ZenCal</h2></a>
-          <p>
-            An event and task calendar app, that allows users to log in and
-            create reminders for their important events and tasks. Built with
-            Vue.js and Firebase.
-          </p>
-        </div>
-      </div>
+      <carousel :per-page="1" :mouse-drag="true" :loop="true">
+        <slide class="slide">
+          <div class="project">
+            <div class="image">
+              <img class="antarkeith" src="../assets/antarkeith.png" alt="" />
+            </div>
+            <div class="text">
+              <a href="https://www.antarkeith.com/"><h2>Antar Keith</h2></a>
+              <p>
+                An event and task calendar app, that allows users to log in and
+                create reminders for their important events and tasks. Built
+                with Vue.js and Firebase.
+              </p>
+            </div>
+          </div>
+        </slide>
+        <slide class="slide">
+          <div class="project">
+            <div class="image">
+              <img class="devhausweb" src="../assets/devhausweb.png" alt="" />
+            </div>
+            <div class="text">
+              <a href="https://devhausleipzig.netlify.app"
+                ><h2>Devhaus Leipzig</h2></a
+              >
+              <p>
+                An event and task calendar app, that allows users to log in and
+                create reminders for their important events and tasks. Built
+                with Vue.js and Firebase.
+              </p>
+            </div>
+          </div>
+        </slide>
+        <slide class="slide">
+          <div class="project">
+            <div class="image">
+              <img class="hallocity" src="../assets/hallocity.png" alt="" />
+            </div>
+            <div class="text">
+              <a href="https://hallocity.org"><h2>Hallo.City</h2></a>
+              <p>
+                An event and task calendar app, that allows users to log in and
+                create reminders for their important events and tasks. Built
+                with Vue.js and Firebase.
+              </p>
+            </div>
+          </div>
+        </slide>
 
-      <div class="project">
-        <div class="image">
-          <img class="celestial" src="../assets/celestial.png" alt="" />
-        </div>
-        <div class="text">
-          <a href="https://celestial-weather.netlify.app/"
-            ><h2>Celestial Weather</h2></a
-          >
-          <p>
-            A project using pure vanilla javascript to create a basic frontend
-            framework. Multiple API calls to create an interesting user
-            experience including horoscopes, APOD, and the current local
-            weather.
-          </p>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="image">
-          <img class="devhaus" src="../assets/devhaus.png" alt="" />
-        </div>
-        <div class="text">
-          <a href="https://devhaus-testing.web.app"><h2>DevHaus</h2></a>
-          <p>
-            A site for members of
-            <a href="https://codecampleipzig.de/">Code Camp Leipzig</a> to
-            connect, contact eachother, and keep up to date with events and
-            workshops that are being organized and offered. Built with Vue.js,
-            Vuex, Firebase, and Tailwind-CSS.
-          </p>
-        </div>
-      </div>
-
-      <div class="project">
-        <div class="image">
-          <img class="makangani" src="../assets/makangani.png" alt="" />
-        </div>
-        <div class="text">
-          <a href="https://makangani.netlify.app/"><h2>Makangani</h2></a>
-          <p>
-            Offical site for Leipzig, DE based rapper
-            <a href="https://open.spotify.com/artist/0yC4F5v6MCGhYGUvY49DRm"
-              >Makangani</a
-            >. Built with pure vanilla javascript, html, and css3. Inspired by
-            the designs from Dreamville Records artists such as JID, Mereba, and
-            Ari Lennox.
-          </p>
-        </div>
-      </div>
+        <slide class="slide">
+          <div class="project">
+            <div class="image">
+              <img class="celestial" src="../assets/celestial.png" alt="" />
+            </div>
+            <div class="text">
+              <a href="https://celestial-weather.netlify.app/"
+                ><h2>Celestial Weather</h2></a
+              >
+              <p>
+                A project using pure vanilla javascript to create a basic
+                frontend framework. Multiple API calls to create an interesting
+                user experience including horoscopes, APOD, and the current
+                local weather.
+              </p>
+            </div>
+          </div>
+        </slide>
+        <slide class="slide">
+          <div class="project">
+            <div class="image">
+              <img class="devhaus" src="../assets/devhaus.png" alt="" />
+            </div>
+            <div class="text">
+              <a href="https://devhaus-testing.web.app"
+                ><h2>DevHaus Memebers</h2></a
+              >
+              <p>
+                A site for members of
+                <a href="https://codecampleipzig.de/">Code Camp Leipzig</a> to
+                connect, contact eachother, and keep up to date with events and
+                workshops that are being organized and offered. Built with
+                Vue.js, Vuex, Firebase, and Tailwind-CSS.
+              </p>
+            </div>
+          </div>
+        </slide>
+        <slide class="slide">
+          <div class="project">
+            <div class="image">
+              <img class="makangani" src="../assets/makangani.png" alt="" />
+            </div>
+            <div class="text">
+              <a href="https://makangani.netlify.app/"><h2>Makangani</h2></a>
+              <p>
+                Offical site for Leipzig, DE based rapper
+                <a href="https://open.spotify.com/artist/0yC4F5v6MCGhYGUvY49DRm"
+                  >Makangani</a
+                >. Built with pure vanilla javascript, html, and css3. Inspired
+                by the designs from Dreamville Records artists such as JID,
+                Mereba, and Ari Lennox.
+              </p>
+            </div>
+          </div>
+        </slide>
+      </carousel>
     </section>
   </div>
 </template>
@@ -91,7 +133,6 @@ export default {
 <style scoped>
 * {
   margin: 0 auto;
-  cursor: url();
 }
 @media only screen and (max-width: 600px) {
   .main img {
@@ -105,7 +146,7 @@ export default {
   src: url("../fonts/NaftaLight-Regular.ttf");
 }
 
-.projects {
+.main-image {
   height: 650px;
   width: 650px;
   display: flex;
@@ -113,10 +154,8 @@ export default {
 }
 
 .project-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-top: 0;
+  padding-bottom: 4rem;
 }
 
 .project {
@@ -127,6 +166,11 @@ export default {
   height: 410px;
   margin: 2rem;
   border: 1px solid gray;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
 }
 
 .project img {
