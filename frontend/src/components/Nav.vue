@@ -22,8 +22,16 @@ export default {
 <style scoped>
 @media only screen and (max-width: 600px) {
   .nav {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     font-size: 18px;
+  }
+
+  .home .link {
+    padding: 0;
+  }
+
+  .menu .link {
+    padding: 0 0.5rem;
   }
 }
 

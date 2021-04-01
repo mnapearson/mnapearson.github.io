@@ -175,11 +175,15 @@
         </div>
       </div>
     </div>
+    <footer>
+      <cookie-law theme="dark-lime"></cookie-law>
+    </footer>
   </div>
 </template>
 
 <script>
-export default {};
+import CookieLaw from "vue-cookie-law";
+export default { components: { CookieLaw } };
 </script>
 
 <style scoped>

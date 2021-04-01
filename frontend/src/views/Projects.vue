@@ -15,9 +15,10 @@
             <div class="text">
               <a href="https://www.antarkeith.com/"><h2>Antar Keith</h2></a>
               <p>
-                An event and task calendar app, that allows users to log in and
-                create reminders for their important events and tasks. Built
-                with Vue.js and Firebase.
+                A portfolio page for black rights activist, speaker, educator,
+                and political figure, Antar Keith. Built with with the basics,
+                in one-pager format. Embedding multiple media files and articles
+                for easy access to diverse content.
               </p>
             </div>
           </div>
@@ -32,9 +33,10 @@
                 ><h2>Devhaus Leipzig</h2></a
               >
               <p>
-                An event and task calendar app, that allows users to log in and
-                create reminders for their important events and tasks. Built
-                with Vue.js and Firebase.
+                An informative page for the many projects of local studio and
+                software education center, Devhaus Leipzig. Using React, SASS,
+                and built under the mentorship of Code Camp Leipzig co-founder
+                Gabriel Heinrich.
               </p>
             </div>
           </div>
@@ -47,9 +49,10 @@
             <div class="text">
               <a href="https://hallocity.org"><h2>Hallo.City</h2></a>
               <p>
-                An event and task calendar app, that allows users to log in and
-                create reminders for their important events and tasks. Built
-                with Vue.js and Firebase.
+                A landing page built for collecting user emails and advertising
+                the development of the new web app for Hallo.City. Built with
+                the basics. Design created by the wonderful UX/UI Designer
+                Bárbara Niño.
               </p>
             </div>
           </div>
@@ -66,9 +69,9 @@
               >
               <p>
                 A project using pure vanilla javascript to create a basic
-                frontend framework. Multiple API calls to create an interesting
-                user experience including horoscopes, APOD, and the current
-                local weather.
+                frontend framework. Multiple API calls to create a diverse user
+                experience including horoscopes, APOD, and the users local
+                weather.
               </p>
             </div>
           </div>
@@ -139,6 +142,11 @@ export default {
     width: 300px;
     height: 300px;
   }
+
+  .image .antarkeith {
+    width: 300px;
+    height: 170px;
+  }
 }
 
 @font-face {
@@ -162,10 +170,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 650px;
-  height: 410px;
-  margin: 2rem;
-  border: 1px solid gray;
 }
 
 .slide {
@@ -176,6 +180,7 @@ export default {
 .project img {
   height: 410px;
   width: 650px;
+  border: 1px solid gray;
 }
 
 .text {

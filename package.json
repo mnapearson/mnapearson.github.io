@@ -11,6 +11,7 @@
     "build": "cd frontend && yarn build"
   },
   "dependencies": {
-    "vue-carousel": "^0.18.0"
+    "vue-carousel": "^0.18.0",
+    "vue-cookie-law": "^1.13.3"
   }
 }

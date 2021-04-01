@@ -2,29 +2,25 @@
   <div>
     <Nav></Nav>
     <div class="main">
-      <img class="about" src="../assets/about.png" />
+      <img class="main-image" src="../assets/about.png" />
     </div>
     <section class="about-main">
       <div class="selfie">
         <img class="profile one" src="../assets/profile1.jpeg" />
-        <img class="profile two" src="../assets/profile2.jpeg" />
-        <img class="profile three" src="../assets/profile3.jpeg" />
-        <img class="profile four" src="../assets/profile4.jpeg" />
       </div>
-      <div class="description">
+      <div class="about-content">
         <div class="text">
-          <h1>Hey stranger,</h1>
-          <h1>I am a UX obsessed design-driven Software Engineer.</h1>
+          <h1>Hi, thanks for being here.</h1>
+
           <p>
-            My name is Michaela Pearson. I like to make websites. Let's make one
+            My name is Michaela Pearson. <br />I am the founder of Paradies
+            Studio. <br />I like to make websites. <br />Let's make one
             together, shall we?
           </p>
-          <div class="resume">
-            <p>*Download my CV</p>
-            <img class="finger" src="../assets/pointing-finger.png" alt="" />
-            <a href="../map-resume.pdf" download="../map-resume.pdf"
-              ><img class="icon" src="../assets/resume-icon.png" alt=""
-            /></a>
+          <div class="contact-button">
+            <router-link class="contact" to="/contact">
+              <button class="glow-on-hover">Get In Touch!</button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -45,6 +41,8 @@ export default {
 <style scoped>
 * {
   margin: 0 auto;
+  font-family: "NaftaLight-Regular";
+  line-height: 2rem;
 }
 
 @media only screen and (max-width: 600px) {
@@ -54,298 +52,124 @@ export default {
   }
 }
 
-.about img {
+.main-image {
   height: 650px;
   width: 650px;
   display: flex;
   margin-top: 2rem;
 }
 
-@font-face {
-  font-family: "NaftaLight-Regular";
-  src: url("../fonts/NaftaLight-Regular.ttf");
-}
-
-.about {
-  height: 80vh;
-  width: 80vw;
-  margin-top: 2rem;
-  display: flex;
-}
-
-.about-main {
-  margin-top: 3rem;
+.about-content {
   display: flex;
   align-items: center;
-  width: 100vw;
-  margin-bottom: 3rem;
-}
-
-.description {
-  display: flex;
-  align-items: flex-start;
   flex-direction: column;
-  width: 50%;
-}
-
-.resume {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.finger {
-  height: 35px;
-  width: auto;
-  display: flex;
-  margin-top: 2rem;
-  margin-left: 0.5rem;
-}
-
-.icon {
-  height: 50px;
-  width: auto;
-  margin-top: 1.5rem;
-  margin-left: 1rem;
-}
-
-.text {
-  font-family: "NaftaLight-Regular";
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-h1 {
-  width: 50%;
-}
-
-p {
-  margin-top: 2rem;
-  line-height: 2rem;
-  width: 50%;
 }
 
 .selfie {
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 50%;
 }
 
 .profile {
-  max-width: 30%;
-  max-height: auto;
+  max-width: 75%;
   margin: 1rem;
 }
 
-.four {
-  -webkit-animation: flicker-in-1 1s linear 3s both;
-  animation: flicker-in-1 1s linear 3s both;
-}
-.three {
-  -webkit-animation: flicker-in-1 1s linear 2s both;
-  animation: flicker-in-1 1s linear 2s both;
+.text {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin-top: 2rem;
 }
 
-.two {
-  -webkit-animation: flicker-in-1 1s linear 1s both;
-  animation: flicker-in-1 1s linear 1s both;
+p {
+  margin-top: 1.5rem;
+  font-size: 18px;
+  text-align: center;
 }
 
-.one {
-  -webkit-animation: flicker-in-1 1s linear both;
-  animation: flicker-in-1 1s linear both;
+.contact-button {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
 }
-@-webkit-keyframes flicker-in-1 {
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
   0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  10.1% {
-    opacity: 1;
-  }
-  10.2% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  20.1% {
-    opacity: 1;
-  }
-  20.6% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  30.1% {
-    opacity: 1;
-  }
-  30.5% {
-    opacity: 1;
-  }
-  30.6% {
-    opacity: 0;
-  }
-  45% {
-    opacity: 0;
-  }
-  45.1% {
-    opacity: 1;
+    background-position: 0 0;
   }
   50% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 1;
-  }
-  55.1% {
-    opacity: 0;
-  }
-  57% {
-    opacity: 0;
-  }
-  57.1% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  60.1% {
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  65.1% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  75.1% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 0;
-  }
-  77.1% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  85.1% {
-    opacity: 0;
-  }
-  86% {
-    opacity: 0;
-  }
-  86.1% {
-    opacity: 1;
+    background-position: 400% 0;
   }
   100% {
-    opacity: 1;
-  }
-}
-@keyframes flicker-in-1 {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  10.1% {
-    opacity: 1;
-  }
-  10.2% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  20.1% {
-    opacity: 1;
-  }
-  20.6% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  30.1% {
-    opacity: 1;
-  }
-  30.5% {
-    opacity: 1;
-  }
-  30.6% {
-    opacity: 0;
-  }
-  45% {
-    opacity: 0;
-  }
-  45.1% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 1;
-  }
-  55.1% {
-    opacity: 0;
-  }
-  57% {
-    opacity: 0;
-  }
-  57.1% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  60.1% {
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  65.1% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  75.1% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 0;
-  }
-  77.1% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  85.1% {
-    opacity: 0;
-  }
-  86% {
-    opacity: 0;
-  }
-  86.1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
+    background-position: 0 0;
   }
 }
 </style>

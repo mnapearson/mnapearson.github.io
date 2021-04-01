@@ -51,60 +51,13 @@ export default {
 
 .contact {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  height: 1000px;
+  width: auto;
 }
 
-#mc-embedded-subscribe-form {
-  margin: 2rem;
-  font-family: "NaftaLight-Regular";
-}
-
-#mce-MMERGE2 {
-  width: 200px;
-  height: 200px;
-}
-
-input {
-  font-family: "NaftaLight-Regular";
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  width: 200px;
-}
-
-h1 {
-  font-family: "NaftaLight-Regular";
-  text-align: center;
-  margin: 2rem 0 1rem;
-}
-
-.btn {
-  cursor: pointer;
-  padding: 8px 10px;
-  outline: none;
-  border: none;
-  background: black;
-  font-size: 16px;
-  font-weight: bold;
-  font-family: "NaftaLight-Regular";
-  color: white;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  background-color: pink;
-  color: black;
-}
-
-@font-face {
-  font-family: "NaftaLight-Regular";
-  src: url("../fonts/NaftaLight-Regular.ttf");
+.pageContainer-nfp_a,
+.wink .pageContainer-nfp_a {
+  padding: 0;
 }
 </style>
