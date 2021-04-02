@@ -12,6 +12,15 @@
             <div class="image">
               <img class="antarkeith" src="../assets/antarkeith.png" alt="" />
             </div>
+            <div class="mobile-text">
+              <a href="https://www.antarkeith.com/"><h2>Antar Keith</h2></a>
+              <p>
+                A portfolio page for black rights activist, speaker, educator,
+                and political figure, Antar Keith. Built with with the basics,
+                in one-pager format. Embedding multiple media files and articles
+                for easy access to diverse content.
+              </p>
+            </div>
             <div class="text">
               <a href="https://www.antarkeith.com/"><h2>Antar Keith</h2></a>
               <p>
@@ -27,6 +36,17 @@
           <div class="project">
             <div class="image">
               <img class="devhausweb" src="../assets/devhausweb.png" alt="" />
+            </div>
+            <div class="mobile-text">
+              <a href="https://devhausleipzig.netlify.app"
+                ><h2>Devhaus Leipzig</h2></a
+              >
+              <p>
+                An informative page for the many projects of local studio and
+                software education center, Devhaus Leipzig. Using React, SASS,
+                and built under the mentorship of Code Camp Leipzig co-founder
+                Gabriel Heinrich.
+              </p>
             </div>
             <div class="text">
               <a href="https://devhausleipzig.netlify.app"
@@ -46,6 +66,15 @@
             <div class="image">
               <img class="hallocity" src="../assets/hallocity.png" alt="" />
             </div>
+            <div class="mobile-text">
+              <a href="https://hallocity.org"><h2>Hallo.City</h2></a>
+              <p>
+                A landing page built for collecting user emails and advertising
+                the development of the new web app for Hallo.City. Built with
+                the basics. Design created by the wonderful UX/UI Designer
+                Bárbara Niño.
+              </p>
+            </div>
             <div class="text">
               <a href="https://hallocity.org"><h2>Hallo.City</h2></a>
               <p>
@@ -62,6 +91,17 @@
           <div class="project">
             <div class="image">
               <img class="celestial" src="../assets/celestial.png" alt="" />
+            </div>
+            <div class="mobile-text">
+              <a href="https://celestial-weather.netlify.app/"
+                ><h2>Celestial Weather</h2></a
+              >
+              <p>
+                A project using pure vanilla javascript to create a basic
+                frontend framework. Multiple API calls to create a diverse user
+                experience including horoscopes, APOD, and the users local
+                weather.
+              </p>
             </div>
             <div class="text">
               <a href="https://celestial-weather.netlify.app/"
@@ -81,6 +121,18 @@
             <div class="image">
               <img class="devhaus" src="../assets/devhaus.png" alt="" />
             </div>
+            <div class="mobile-text">
+              <a href="https://devhaus-testing.web.app"
+                ><h2>DevHaus Memebers</h2></a
+              >
+              <p>
+                A site for members of
+                <a href="https://codecampleipzig.de/">Code Camp Leipzig</a> to
+                connect, contact eachother, and keep up to date with events and
+                workshops that are being organized and offered. Built with
+                Vue.js, Vuex, Firebase, and Tailwind-CSS.
+              </p>
+            </div>
             <div class="text">
               <a href="https://devhaus-testing.web.app"
                 ><h2>DevHaus Memebers</h2></a
@@ -99,6 +151,17 @@
           <div class="project">
             <div class="image">
               <img class="makangani" src="../assets/makangani.png" alt="" />
+            </div>
+            <div class="mobile-text">
+              <a href="https://makangani.netlify.app/"><h2>Makangani</h2></a>
+              <p>
+                Offical site for Leipzig, DE based rapper
+                <a href="https://open.spotify.com/artist/0yC4F5v6MCGhYGUvY49DRm"
+                  >Makangani</a
+                >. Built with pure vanilla javascript, html, and css3. Inspired
+                by the designs from Dreamville Records artists such as JID,
+                Mereba, and Ari Lennox.
+              </p>
             </div>
             <div class="text">
               <a href="https://makangani.netlify.app/"><h2>Makangani</h2></a>
@@ -136,22 +199,16 @@ export default {
 <style scoped>
 * {
   margin: 0 auto;
-}
-@media only screen and (max-width: 600px) {
-  .main img {
-    width: 300px;
-    height: 300px;
-  }
-
-  .image .antarkeith {
-    width: 300px;
-    height: 170px;
-  }
+  font-family: "NaftaLight-Regular";
 }
 
 @font-face {
   font-family: "NaftaLight-Regular";
   src: url("../fonts/NaftaLight-Regular.ttf");
+}
+
+.mobile-text {
+  display: none;
 }
 
 .main-image {
@@ -190,7 +247,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  font-family: "NaftaLight-Regular";
+
   transition: opacity 0.2s, visibility 0.2s;
   background: rgba(0, 0, 0, 0.7);
   border-radius: 15px;
@@ -227,5 +284,41 @@ a {
 
 a:hover {
   color: pink;
+}
+
+@media only screen and (max-width: 600px) {
+  .main img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .image img {
+    margin-top: 3rem;
+    width: 300px;
+    height: 170px;
+  }
+
+  .project .text {
+    display: none;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .mobile-text {
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    font-size: 24px;
+    text-decoration: underline;
+  }
+
+  a {
+    color: black;
+  }
 }
 </style>
